@@ -1,15 +1,5 @@
 <div class="">
   <section id="homeComponentSection">
-
-    <div id="circle-container-1" class="circle-container">
-    </div>
-
-    <div id="circle-container-2" class="circle-container">
-    </div>
-
-    <div id="circle-container-3" class="circle-container">
-    </div>
-
     <div id="back-image-container">
       <img id="img-page-back" src="{{vm.backImage}}">
     </div>
@@ -17,13 +7,40 @@
     </div>
     <div class="container">
       <div id="landing-info-container" class="row">
-        <div class="col s12 m6 center-align ">
-          <div id="circle-container-4" class="circle-container">
-            <img id="ryanair-logo" class="responsive-img" src="{{vm.logo}}">
-          </div>
-        </div>
-        <div class="col s12 m6 center-align ">
-          b
+        <div class="col s12 center-align ">
+
+             <div class="container" id="widget-container">
+              <div class="card blue-accent-3-transparent">
+                <div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <div class="row">
+                              <div class="col s11">
+                                <input type="text" id="autocomplete-input2" class="autocomplete">
+                                <label class="au-label-input" for="autocomplete-input">Origin</label>
+                              </div>
+                              <div class="col s1">
+                                <i class="fa-icon fa fa-plane fa-3x" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="card-action">
+                  <button class="btn waves-effect waves-light amber lighten-1"  type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
         </div>
       </div>
     </div>

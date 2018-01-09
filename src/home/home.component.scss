@@ -1,5 +1,5 @@
 #homeComponentSection{
-  height: 100vh;
+  height: 70vh;
   background-color: rgba(0,39,181,0);
   width: 100%;
   display: flex;
@@ -12,7 +12,7 @@
   top:0px;
   left: 0px;
   width: 100%;
-  height:100vh;
+  height: 70vh;
   z-index: -100;
 
   -webkit-background-size: cover;
@@ -24,10 +24,10 @@
 
 #back-image-cover{
   position: absolute;
-  top:0px;
+  top: 0px;
   left: 0px;
   width: 100%;
-  height:100vh;
+  height: 70vh;
   background-color: rgba(0,0,0,0.5);
   z-index: -99;
   background-size: cover;
@@ -36,7 +36,7 @@
 
 #img-page-back{
   width: 100%;
-  height: 100vh;
+  height: 70vh;
 }
 
 .circle-container{
@@ -46,38 +46,27 @@
   z-index: -98;
 }
 
-#circle-container-1{
-  left: -100px;
-  top: -100px;
-  height: 400px;
-  width: 400px;
+.blue-accent-3-transparent{
+    background-color: rgba(13,71,161,0.5);
 }
 
-#circle-container-2{
-  left: 220px;
-  top: -20px;
-  height: 250px;
-  width: 250px;
+.au-label-input{
+
+}
+.fa-icon{
+    margin-left: 5px;
 }
 
-#circle-container-3{
-  left: 420px;
-  top: -40px;
-  height: 160px;
-  width: 160px;
+#widget-container{
+  position: absolute;
+  animation-name: widget-in;
+  animation-duration: 1s;
+  animation-fill-mode:forwards;
+  animation-timing-function: cubic-bezier(.33,.02,.35,1.47);
+  top: calc(100vh + 600px);
 }
 
-#circle-container-4{
-  left: calc(100vw - 600px);
-  top: calc(100vh - 200px);
-  width: 80vw;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  z-index: 100;
-}
-
-.anim-cont-4{
-
+@keyframes widget-in {
+    0%   {top: calc(100vh + 600px);}
+    100% {top: 40vh;}
 }

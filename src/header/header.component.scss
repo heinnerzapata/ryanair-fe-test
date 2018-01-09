@@ -1,9 +1,15 @@
 .ryanair-nav{
-  background-color: rgba(0,39,181,1);
+  background-color: rgba(0,0,0,0);
   color:white;
 }
 #ryanair-logo-container{
   max-width: 250px;
+  -webkit-transition: all .2s ease-in-out; /* Safari */
+  transition: all .2s ease-in-out;
+}
+
+#ryanair-logo-container:hover{
+  transform: scale(1.03);
 }
 .nav-right-item{
   display: flex;

@@ -1,6 +1,6 @@
 import template from './header.component.html';
 import './header.component.scss';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo2.png';
 
 function HeaderController(){
   var vm = this;

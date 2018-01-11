@@ -12,30 +12,19 @@
              <div class="container" id="widget-container">
               <div class="card blue-accent-3-transparent">
                 <div class="card-content white-text">
-                  <span class="card-title">Card Title</span>
-
+                  <span class="card-title">Flights</span>
                     <div class="row">
                       <div class="col s12">
-                        <div class="row">
-                          <div class="input-field col s12">
-                            <div class="row">
-                              <div class="col s11">
-                                <input type="text" id="autocomplete-input2" class="autocomplete">
-                                <label class="au-label-input" for="autocomplete-input">Origin</label>
-                              </div>
-                              <div class="col s1">
-                                <i class="fa-icon fa fa-plane fa-3x" aria-hidden="true"></i>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                       <ac-airport typeac='O'></ac-airport>
+                      </div>
+                      <div class="col s12">
+                       <ac-airport typeac='D'></ac-airport>
                       </div>
                     </div>
-
                 </div>
                 <div class="card-action">
-                  <button class="btn waves-effect waves-light amber lighten-1"  type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
+                  <button class="btn waves-effect waves-light amber grey-text text-darken-4"  type="submit" name="action">Search
+                    <i class="fa-icon fa fa-search fa-2x" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -44,10 +33,10 @@
         </div>
       </div>
     </div>
-   <!--  <date-wrapper
+   <date-wrapper
       start-date="$ctrl.startDate"
       end-date="$ctrl.endDate">
-    </date-wrapper>
-   -->
+  </date-wrapper>
+
   </section>
 </div>

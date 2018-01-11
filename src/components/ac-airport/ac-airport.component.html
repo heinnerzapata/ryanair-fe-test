@@ -1,0 +1,17 @@
+<!--acAirportComponent-->
+<section class="acAirportComponent">
+  <div class="row">
+    <div class="input-field col s12">
+      <div class="row">
+        <div class="col s11">
+          <input type="text" id="autocomplete-input2" ng-change="$ctrl.getOrigins();" class="autocomplete" ng-model="$ctrl.airport" />
+          <label class="au-label-input" for="autocomplete-input">{{$ctrl.typeac == 'D' ? 'Destination' : 'Origin'}}</label>
+        </div>
+        <div class="col s1">
+          <i ng-class="{'icon-destiny' : $ctrl.typeac == 'D' }" class="fa-icon fa fa-plane fa-2x" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/acAirportComponent-->

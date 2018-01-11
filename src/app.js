@@ -6,39 +6,29 @@ import { BookingComponent } from './booking/booking.component';
 import { HeaderComponent } from './header/header.component';
 import './scss/main.scss';
 
-import {
-  CheapFlightService,
-  AirportsService
-} from './services';
+import { AirportsService } from './services/airports.service.js';
 
-var app = angular.module('myApp', [uiRouter, Components]);
 
-app.controller('mainCtrl', function(){
-  this.hello = 'test HZ';
-})
 
-app.component('bookingPage', BookingComponent);
-app.component('homePage', HomeComponent)
-app.component('headerSection', HeaderComponent)
-
-app.config(function($stateProvider, $urlRouterProvider){
-  $urlRouterProvider.otherwise("/")
-
-  $stateProvider
-    .state('home', {
-      url: '/',
-      template: '<home-page></home-page>'
+angular
+    .module('myApp', [uiRouter, Components ])
+    .service('AirportsService', AirportsService)
+    .component('bookingPage', BookingComponent)
+    .component('homePage', HomeComponent)
+    .component('headerSection', HeaderComponent)
+    .config(($stateProvider , $urlRouterProvider) => {
+      $stateProvider
+        .state('home', {
+          url: '/',
+          template: '<home-page></home-page>'
+        })
+        .state('booking', {
+          url: '/booking',
+          template: '<booking-page></booking-page>'
+       })
+       $urlRouterProvider.otherwise("/")
     })
-  $stateProvider
-    .state('booking', {
-      url: '/booking',
-      template: '<booking-page></booking-page>'
-    })
-})
-
-.service('AiportsService', AirportsService)
-.service('CheapFlightService', CheapFlightService)
-
+    .name
 /*
 .component('homePage', HomeComponent)
 .component('bookingPage', BookingComponent)
@@ -57,5 +47,25 @@ app.config(function($stateProvider, $urlRouterProvider){
       template: '<booking-page></booking-page>'
    });
 });
+
+*/
+
+
+/*
+
+
+.config(function($stateProvider, $urlRouterProvider){
+  $urlRouterProvider.otherwise("/")
+  $stateProvider
+    .state('home', {
+      url: '/',
+      template: '<home-page></home-page>'
+    })
+  $stateProvider
+    .state('booking', {
+      url: '/booking',
+      template: '<booking-page></booking-page>'
+    })
+})
 
 */

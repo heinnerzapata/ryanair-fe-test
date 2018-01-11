@@ -1,31 +1,9 @@
 import template from './home.component.html';
+import controller from './home.controller.js'
 import './home.component.scss';
-import logo from '../assets/images/logo.png';
-import backImage from '../assets/images/back1.jpg';
-
-function HomeController(){
-  var vm = this;
-  vm.name = 'heinner';
-  vm.logo = logo;
-  vm.backImage = backImage;
-
-  $('input.autocomplete').autocomplete({
-    data: {
-      "Apple": null,
-      "Microsoft": null,
-      "Google": 'https://placehold.it/250x250'
-    },
-    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-    onAutocomplete: function(val) {
-      // Callback function when value is autcompleted.
-    },
-    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
-  });
-
-}
 
 export const HomeComponent = {
-  template: template,
-  controller: HomeController,
+  controller,
+  template,
   controllerAs: 'vm'
-};
+}
